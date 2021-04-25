@@ -2,6 +2,13 @@
   "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
   "layers": [
     {
+      "id": "sky",
+      "paint": {
+        "sky-type": "atmosphere"
+      },
+      "type": "sky"
+    },
+    {
       "id": "background",
       "paint": {
         "background-color": [
@@ -1213,7 +1220,19 @@
         "https://optgeo.github.io/fgd-tokio/zxy/{z}/{x}/{y}.pbf"
       ],
       "type": "vector"
+    },
+    "h": {
+      "maxzoom": 13,
+      "minzoom": 3,
+      "tileSize": 512,
+      "tiles": [
+        "https://optgeo.github.io/10b512-7-113-50/zxy/{z}/{x}/{y}.webp"
+      ],
+      "type": "raster-dem"
     }
+  },
+  "terrain": {
+    "source": "h"
   },
   "version": 8,
   "zoom": 8,
